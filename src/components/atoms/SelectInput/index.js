@@ -7,12 +7,16 @@ function SelectInput({
 	required = false,
 	onSelect = () => {},
 	placeholder = '',
+	name = '',
+	error = '',
+	...props
 }) {
 	return (
-		<Form layout="vertical" requiredMark={false}>
+		<Form layout="vertical" requiredMark={false} name={name}>
 			<Form.Item
+				validateStatus={error ? 'error' : ''}
 				label={
-					<span style={{ fontWeight: 'bold' }}>
+					<span style={{ fontWeight: '600' }}>
 						{label}
 						{required && <span style={{ color: 'red', marginLeft: 4 }}>*</span>}
 					</span>
@@ -21,6 +25,7 @@ function SelectInput({
 				required={required}
 			>
 				<Select
+					{...props}
 					value={value}
 					placeholder={placeholder}
 					options={options}
@@ -29,6 +34,18 @@ function SelectInput({
 						height: '36px',
 					}}
 				/>
+				{error && (
+					<span
+						style={{
+							color: 'red',
+							fontSize: '12px',
+							marginTop: '4px',
+							fontWeight: 'normal',
+						}}
+					>
+						{error}
+					</span>
+				)}
 			</Form.Item>
 		</Form>
 	);
