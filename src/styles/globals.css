@@ -1,16 +1,57 @@
-
 /* CUSTOM TABLE */
 .ant-table-thead .ant-table-cell {
-  background-color: #04195EFF !important;
+  background-color: #04195eff !important;
   color: white !important;
 }
 .even {
-  background-color: #FAFAFB !important;
+  background-color: #fafafb !important;
 }
 
 /* CUSTOM PAGINATION */
 .ant-pagination-item-active {
-  border-color: #E49715FF !important;
-  color: #636AE8FF !important;
+  border-color: #e49715ff !important;
+  color: #636ae8ff !important;
   border-radius: 100% !important;
+}
+html,
+body,
+#__next {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ant-layout-sider-trigger {
+  display: none !important;
+}
+
+.ant-layout-sider,
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
+  background-color: #04195e !important;
+  font-weight: bold;
+  padding: 4px !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #e49714 !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-dark .ant-menu-item-selected a,
+.ant-menu-dark .ant-menu-item-selected .anticon {
+  color: white !important;
+}
+
+.header-container {
+  padding: 20px 30px 16px 49px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
