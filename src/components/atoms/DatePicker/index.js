@@ -1,37 +1,47 @@
-import { Form, Select } from 'antd';
+import { DatePicker, Form } from 'antd';
 
-function SelectInput({
+function DatePickerInput({
 	label = '',
-	value = null,
-	options = [],
-	required = false,
-	onSelect = () => {},
-	placeholder = '',
 	name = '',
+	required = false,
+	minDate = null,
+	maxDate = null,
+	placeholder = '',
+	value = null,
+	onChange = () => {},
 	error = '',
 	...props
 }) {
 	return (
-		<Form layout="vertical" requiredMark={false} name={name}>
+		<Form
+			layout="vertical"
+			style={{
+				fontWeight: 'bold',
+			}}
+			name={name}
+		>
 			<Form.Item
-				validateStatus={error ? 'error' : ''}
 				label={
 					<span style={{ fontWeight: '600' }}>
 						{label}
 						{required && <span style={{ color: 'red', marginLeft: 4 }}>*</span>}
 					</span>
 				}
-				required={required}
+				validateStatus={error ? 'error' : ''}
 			>
-				<Select
-					{...props}
-					value={value}
+				<DatePicker
+					allowClear
+					minDate={minDate}
+					maxDate={maxDate}
 					placeholder={placeholder}
-					options={options}
-					onSelect={onSelect}
 					style={{
+						width: '100%',
 						height: '36px',
 					}}
+					onChange={onChange}
+					value={value}
+					format="DD-MM-YYYY"
+					{...props}
 				/>
 				{error && (
 					<span
@@ -50,4 +60,4 @@ function SelectInput({
 	);
 }
 
-export default SelectInput;
+export default DatePickerInput;

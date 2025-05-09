@@ -1,7 +1,7 @@
-import React from "react";
+import LayoutComponent from '@/components/templates/Layout';
 
 function Home() {
-  return <div></div>;
+	return <LayoutComponent>Dashboard</LayoutComponent>;
 }
 
 export default Home;

@@ -1,23 +1,26 @@
-import React from "react";
-import { Layout } from "antd";
-import Sidebar from "../Sidebar";
-import Navbar from "../Navbar";
-import styles from "./Layout.module.css";
+import React from 'react';
+import { Layout } from 'antd';
+import styles from './Layout.module.css';
+import Sidebar from '@/components/molecules/Sidebar';
+import Navbar from '@/components/molecules/Navbar';
 
 const { Content } = Layout;
 
 const LayoutComponent = ({ children }) => {
-  return (
-    <Layout className={styles.container}>
-      <Sidebar />
-      <Layout>
-        <Navbar />
-        <Content>
-          <div className={styles.wrapper}>{children}</div>
-        </Content>
-      </Layout>
-    </Layout>
-  );
+	return (
+		<Layout
+			style={{
+				minHeight: '100vh',
+			}}
+		>
+			<Sidebar />
+
+			<Layout>
+				<Navbar />
+				<Content className={styles.wrapper}>{children}</Content>
+			</Layout>
+		</Layout>
+	);
 };
 
 export default LayoutComponent;
