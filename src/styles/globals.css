@@ -1,4 +1,16 @@
-html,
-body {
-  width: 100%;
+
+/* CUSTOM TABLE */
+.ant-table-thead .ant-table-cell {
+  background-color: #04195EFF !important;
+  color: white !important;
+}
+.even {
+  background-color: #FAFAFB !important;
+}
+
+/* CUSTOM PAGINATION */
+.ant-pagination-item-active {
+  border-color: #E49715FF !important;
+  color: #636AE8FF !important;
+  border-radius: 100% !important;
 }
