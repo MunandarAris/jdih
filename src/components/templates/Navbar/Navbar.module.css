@@ -1,0 +1,33 @@
+.header {
+  padding: 0;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #04195e !important;
+  height: 76px !important;
+}
+
+.container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.username {
+  margin-right: 1rem;
+}

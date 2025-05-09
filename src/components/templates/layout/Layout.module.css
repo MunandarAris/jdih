@@ -1,0 +1,10 @@
+.container {
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding: 1.5rem;
+  height: 100vh;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
