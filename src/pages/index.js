@@ -1,7 +1,5 @@
-import LayoutComponent from '@/components/templates/Layout';
-
 function Home() {
-	return <LayoutComponent></LayoutComponent>;
+	return <h1>Selamat Datang 🥳</h1>;
 }
 
 export default Home;
