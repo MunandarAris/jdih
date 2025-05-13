@@ -10,7 +10,7 @@ const InputText = dynamic(() => import('@/components/atoms/InputText'), {
 });
 
 import { colorsTheme } from '@/constants/colors';
-import { Button, Flex, Switch } from 'antd';
+import { Button, Flex } from 'antd';
 import { MdOutlineAdd } from 'react-icons/md';
 import { BiSolidEditAlt } from 'react-icons/bi';
 

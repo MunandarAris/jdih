@@ -17,7 +17,7 @@ import { useState } from 'react';
 dayjs.locale('id');
 
 function IKMPage() {
-	const [openModalConfirmation, setOpenModalConfirmation] = useState(true);
+	const [openModalConfirmation, setOpenModalConfirmation] = useState(false);
 	const [content, setContent] = useState('');
 
 	const columns = [
