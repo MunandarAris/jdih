@@ -55,3 +55,7 @@ body,
   flex-direction: row;
   gap: 10px;
 }
+.required-asterisk {
+  color: red;
+  margin-left: 4px;
+}
