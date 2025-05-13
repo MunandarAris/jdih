@@ -7,6 +7,7 @@ function SwitchComponent({
 	required = false,
 	onChange = () => {},
 	value = false,
+	withLabelValue = true,
 	...props
 }) {
 	return (
@@ -32,14 +33,16 @@ function SwitchComponent({
 							{...props}
 						/>
 
-						<span
-							style={{
-								fontSize: '14px',
-								color: '#323842FF',
-							}}
-						>
-							{value ? 'Aktif' : 'Tidak Aktif'}
-						</span>
+						{withLabelValue && (
+							<span
+								style={{
+									fontSize: '14px',
+									color: '#323842FF',
+								}}
+							>
+								{value ? 'Aktif' : 'Tidak Aktif'}
+							</span>
+						)}
 					</Flex>
 
 					{error && (
