@@ -1,8 +1,7 @@
 :root {
-  --primary-color: #04195EFF;
-  --secondary-color : #E49715FF;
+  --primary-color: #04195eff;
+  --secondary-color: #e49715ff;
 }
-
 
 /* CUSTOM TABLE */
 .ant-table-thead .ant-table-cell {
@@ -64,4 +63,12 @@ body,
 .required-asterisk {
   color: red;
   margin-left: 4px;
+}
+
+.ant-modal-header {
+  margin: 0px !important;
+}
+
+.ant-modal-title {
+  font-size: 24px !important;
 }
