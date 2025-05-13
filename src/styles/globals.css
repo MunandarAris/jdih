@@ -1,6 +1,12 @@
+:root {
+  --primary-color: #04195EFF;
+  --secondary-color : #E49715FF;
+}
+
+
 /* CUSTOM TABLE */
 .ant-table-thead .ant-table-cell {
-  background-color: #04195eff !important;
+  background-color: var(--primary-color) !important;
   color: white !important;
 }
 .even {
@@ -9,7 +15,7 @@
 
 /* CUSTOM PAGINATION */
 .ant-pagination-item-active {
-  border-color: #e49715ff !important;
+  border-color: var(--primary-color) !important;
   color: #636ae8ff !important;
   border-radius: 100% !important;
 }
@@ -33,13 +39,13 @@ body,
 .ant-layout-sider,
 .ant-menu-dark,
 .ant-menu-dark .ant-menu-sub {
-  background-color: #04195e !important;
+  background-color: var(--primary-color) !important;
   font-weight: bold;
   padding: 4px !important;
 }
 
 .ant-menu-dark .ant-menu-item-selected {
-  background-color: #e49714 !important;
+  background-color: var(--secondary-color) !important;
 }
 
 .ant-menu-dark .ant-menu-item-selected,
