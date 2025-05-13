@@ -14,8 +14,8 @@
 
 /* CUSTOM PAGINATION */
 .ant-pagination-item-active {
-  border-color: var(--primary-color) !important;
-  color: #636ae8ff !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
   border-radius: 100% !important;
 }
 html,
@@ -71,4 +71,9 @@ body,
 
 .ant-modal-title {
   font-size: 24px !important;
+}
+
+/* Switch Atoms */
+.ant-switch-checked {
+  background-color: var(--secondary-color) !important;
 }
