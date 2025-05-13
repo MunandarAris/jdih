@@ -1,7 +1,5 @@
-import LayoutComponent from '@/components/templates/Layout';
-
 function DocumentUUPage() {
-	return <LayoutComponent>Document UU</LayoutComponent>;
+  return <div>Document UU</div>;
 }
 
 export default DocumentUUPage;

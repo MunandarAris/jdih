@@ -1,7 +1,5 @@
-import LayoutComponent from '@/components/templates/Layout';
-
 function SocializationVideoPage() {
-	return <LayoutComponent>Video Sosialisasi</LayoutComponent>;
+  return <div>Video Sosialisasi</div>;
 }
 
 export default SocializationVideoPage;

@@ -1,7 +1,5 @@
-import LayoutComponent from '@/components/templates/Layout';
-
 function UserManagementPage() {
-	return <LayoutComponent>User Management</LayoutComponent>;
+  return <div>User Management</div>;
 }
 
 export default UserManagementPage;

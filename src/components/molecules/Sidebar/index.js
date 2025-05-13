@@ -16,7 +16,13 @@ const Sidebar = () => {
   };
 
   return (
-    <Sider width={256} collapsible>
+    <Sider
+      width={256}
+      collapsible
+      style={{
+        minHeight: "100vh",
+        height: "100vh",
+      }}>
       <div className="header-container">
         <Image src={Logo} alt="Logo" width={50} height={50} loading="lazy" />
         <h1>JDIH Polri</h1>
