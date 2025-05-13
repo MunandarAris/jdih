@@ -1,4 +1,20 @@
-import TableComponent from '@/components/organisms/Table';
+import dynamic from 'next/dynamic';
+const TableComponent = dynamic(() => import('@/components/organisms/Table'), {
+	ssr: false,
+});
+const BaseModal = dynamic(() => import('@/components/molecules/BaseModal'), {
+	ssr: false,
+});
+const InputText = dynamic(() => import('@/components/atoms/InputText'), {
+	ssr: false,
+});
+const TextAreaComponent = dynamic(
+	() => import('@/components/atoms/TextAreaComponent'),
+	{
+		ssr: false,
+	}
+);
+
 import { colorsTheme } from '@/constants/colors';
 import { Button, Flex } from 'antd';
 import { MdOutlineAdd } from 'react-icons/md';
@@ -7,9 +23,6 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/id';
 import { FaEdit } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
-import BaseModal from '@/components/molecules/BaseModal';
-import InputText from '@/components/atoms/InputText';
-import TextAreaComponent from '@/components/atoms/TextAreaComponent';
 import { useMemo, useState } from 'react';
 
 function SocializationVideoPage() {
