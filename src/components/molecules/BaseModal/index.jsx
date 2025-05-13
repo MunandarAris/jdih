@@ -4,9 +4,9 @@ import { colorsTheme } from "@/constants/colors";
 
 import styles from "./BaseModal.module.css";
 
-const BaseModal = ({ open, onClose, cancelButtonAttribute, submitButtonAttribute, children, title }) => {
+const BaseModal = ({ open, onClose, cancelButtonAttribute, submitButtonAttribute, children, title, maxWidth = 600 }) => {
   return (
-    <Modal open={open} title={title} onCancel={onClose} footer={null}>
+    <Modal open={open} title={title} onCancel={onClose} footer={null} style={{maxWidth: maxWidth}}>
       {children}
       <Flex justify="end">
         <Flex align="center" gap={8}>
