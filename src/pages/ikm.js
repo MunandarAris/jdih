@@ -1,7 +1,5 @@
-import LayoutComponent from '@/components/templates/Layout';
-
 function IKMPage() {
-	return <LayoutComponent>IKM</LayoutComponent>;
+  return <div>IKM</div>;
 }
 
 export default IKMPage;
