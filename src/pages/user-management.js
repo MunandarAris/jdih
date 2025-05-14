@@ -29,6 +29,7 @@ function UserManagementPage() {
 		email: '',
 		status: false,
 	});
+	const { nama_pengguna, email, status } = form;
 	const [loading, setLoading] = useState(false);
 
 	const columns = [
@@ -118,8 +119,8 @@ function UserManagementPage() {
 	const handlePaginationChange = (current, showPerPage) => {};
 
 	const disabledSubmitButton = useMemo(() => {
-		return !form.nama_pengguna || !form.email;
-	}, [form.email, form.nama_pengguna]);
+		return !nama_pengguna || !email;
+	}, [email, nama_pengguna]);
 
 	const handleCloseModal = () => {
 		setEditUser(false);
@@ -159,6 +160,11 @@ function UserManagementPage() {
 			status: false,
 		});
 		setLoading(false);
+	};
+
+	const handleChangeForm = (e, key) => {
+		const value = e.target.value;
+		setForm((prev) => ({ ...prev, [key]: value }));
 	};
 
 	return (
@@ -217,29 +223,28 @@ function UserManagementPage() {
 						label="Nama Pengguna"
 						required
 						placeholder="Masukkan nama pengguna"
-						onChange={(e) =>
-							setForm((prev) => ({ ...prev, nama_pengguna: e.target.value }))
-						}
-						value={form.nama_pengguna}
+						onChange={(e) => handleChangeForm(e, 'nama_pengguna')}
+						value={nama_pengguna}
+						name="nama_pengguna"
 					/>
 
 					<InputText
 						label="Email"
 						required
 						placeholder="Masukkan alamat email"
-						onChange={(e) =>
-							setForm((prev) => ({ ...prev, email: e.target.value }))
-						}
-						value={form.email}
+						onChange={(e) => handleChangeForm(e, 'email')}
+						value={email}
+						name="email"
 					/>
 
 					<SwitchComponent
 						label="Status"
 						required
-						value={form.status}
+						value={status}
 						onChange={() =>
 							setForm((prev) => ({ ...prev, status: !prev.status }))
 						}
+						name="status"
 					/>
 				</Flex>
 			</BaseModal>
