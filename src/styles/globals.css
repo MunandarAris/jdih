@@ -77,3 +77,20 @@ body,
 .ant-switch-checked {
   background-color: var(--secondary-color) !important;
 }
+
+/* Checkbox wrapper custom class */
+.ant-checkbox-wrapper .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #da951f !important;
+  border-color: #da951f !important;
+}
+
+/* Optional hover effect */
+.ant-checkbox-wrapper .ant-checkbox-checked:hover .ant-checkbox-inner {
+  background-color: #cc8500 !important;
+  border-color: #cc8500 !important;
+}
+
+/* To keep the tick looking white */
+.ant-checkbox-wrapper .ant-checkbox-inner::after {
+  border-color: white !important;
+}

@@ -11,9 +11,12 @@ const inter = Inter({
 
 export default function App({ Component, pageProps }) {
   const [isErrorComponent, setIsErrorComponent] = useState(false);
+  const excludedComponents = ["Error", "LoginPage", "ErrorPage"];
 
   useEffect(() => {
-    if (Component?.name === "Error" || Component?.displayName === "ErrorPage") {
+    if (
+      excludedComponents.includes(Component?.name || Component?.displayName)
+    ) {
       setIsErrorComponent(true);
     } else {
       setIsErrorComponent(false);
