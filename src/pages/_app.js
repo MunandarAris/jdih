@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import { Inter } from 'next/font/google';
 import { ConfigProvider } from 'antd';
-import LayoutComponent from '../components/templates/Layout/index';
+import LayoutComponent from '../components/templates/Layout';
 import { useEffect, useState } from 'react';
 
 const inter = Inter({

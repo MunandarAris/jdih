@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 const nextConfig = {
 	reactStrictMode: true,
 	transpilePackages: [
@@ -13,6 +15,10 @@ const nextConfig = {
 		'rc-table',
 		'rc-input',
 	],
+	webpack(config) {
+		config.plugins.push(new CaseSensitivePathsPlugin());
+		return config;
+	},
 };
 
 export default nextConfig;
